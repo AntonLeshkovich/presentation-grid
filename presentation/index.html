@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>CSS-GRID | Basic concepts</title>
+
+		<link rel="stylesheet" href="./dist/reset.css">
+		<link rel="stylesheet" href="./dist/reveal.css">
+		<link rel="stylesheet" href="./dist/theme/league.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="./plugin/highlight/monokai.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section class="slide-1">
+					<h1 style="font-size: 120px;">CSS Grid Layout</h1>
+					<div class="container">
+						<div class="grid">
+							<div class="grid__item item-1">1</div>
+							<div class="grid__item item-2">2</div>
+							<div class="grid__item item-3">3</div>
+							<div class="grid__item item-4">4</div>
+							<div class="grid__item item-5">5</div>
+							<div class="grid__item item-6">6</div>
+							<div class="grid__item item-7">7</div>
+							<div class="grid__item item-8">8</div>
+						</div>
+					</div>
+				</section>
+				<section class="slide-2">
+					<h2 style="color: #C9A66B;">Grid Layout</h2>
+					<div class="container">
+						<div class="grid">
+							<div class="grid__item item-1">1</div>
+							<div class="grid__item item-2">2</div>
+							<div class="grid__item item-3">3</div>
+							<div class="grid__item item-4">4</div>
+							<div class="grid__item item-5">5</div>
+							<div class="grid__item item-6">6</div>
+							<div class="grid__item item-7">7</div>
+							<div class="grid__item item-8">8</div>
+							<div class="grid__item item-9">9</div>
+							<div class="grid__item item-10">10</div>
+							<div class="grid__item item-11">11</div>
+							<div class="grid__item item-12">12</div>
+							<div class="grid__item item-13">13</div>
+							<div class="grid__item item-14">14</div>
+							<div class="grid__item item-15">15</div>
+							<div class="grid__item item-16">16</div>
+							<div class="grid__item item-17">17</div>
+							<div class="grid__item item-18">18</div>
+							<div class="grid__item item-19">19</div>
+							<div class="grid__item item-20">20</div>
+						</div>
+					</div>
+					<div class="designations__block">
+						<div class="designation__block">
+							<div class="designation designation__grid-track"></div>
+							<p class="designation__name">- Grid track</p>
+						</div>
+						<div class="designation__block">
+							<div class="designation designation__grid-area"></div>
+							<p class="designation__name">- Grid area</p>
+						</div>
+						<div class="designation__block">
+							<div class="designation designation__grid-cell"></div>
+							<p class="designation__name">- Grid cell</p>
+						</div>
+						<div class="designation__block">
+							<div class="designation designation__grid-line"></div>
+							<p class="designation__name">- Grid line</p>
+						</div>
+					</div>
+				</section>
+				<section class="slide-3">
+					<section class="slide-3_1">
+						<h3 style="color: #C9A66B;">Grid container</h3>
+						<p>Ways to declare</p>
+					</section>
+					<section class="slide-3_2">
+						<p class="slide-subtitle">grid</p>
+						<code>
+							<pre>
+								.container {
+									display: grid;
+								}
+							</pre>
+						</code>
+						<div class="container">
+							<div class="grid">
+								<div class="grid__item item-1">1</div>
+								<div class="grid__item item-2">2</div>
+								<div class="grid__item item-3">3</div>
+								<div class="grid__item item-4">4</div>
+								<div class="grid__item item-5">5</div>
+								<div class="grid__item item-6">6</div>
+							</div>
+						</div>
+					</section>
+					<section class="slide-3_3">
+						<p class="slide-subtitle">inline-grid</p>
+						<code>
+							<pre>
+								.container {
+									display: inline-grid;
+								}
+							</pre>
+						</code>
+						<div class="container">
+							<div class="grid">
+								<div class="grid__item item-1">1</div>
+								<div class="grid__item item-2">2</div>
+								<div class="grid__item item-3">3</div>
+								<div class="grid__item item-4">4</div>
+								<div class="grid__item item-5">5</div>
+								<div class="grid__item item-6">6</div>
+							</div>
+						</div>
+					</section>
+				</section>
+				<section class="slide-4">
+					<section class="slide-4_1">
+						<p>Properties:</p>
+					<ul>
+						<li>grid-gap</li>
+						<li>row-gap</li>
+						<li>column-gap</li>
+					</ul>
+					</section>
+					<section class="slide-4_2">
+						<code>
+							<pre>
+								.container {
+									display: grid;
+									grid-gap: 15px;
+									grid-template-columns: 1fr 1fr 1fr;
+								}
+							</pre>
+						</code>
+						<div class="container">
+							<div class="grid">
+								<div class="grid__item item-1">1</div>
+								<div class="grid__item item-2">2</div>
+								<div class="grid__item item-3">3</div>
+								<div class="grid__item item-4">4</div>
+								<div class="grid__item item-5">5</div>
+								<div class="grid__item item-6">6</div>
+							</div>
+						</div>
+					</section>
+				</section>
+				<section class="slide-5">
+					<section class="slide-5_1">
+						<p>Properties:</p>
+					<ul>
+						<li>grid-template-columns</li>
+						<li>grid-template-rows</li>
+						<li>grid-auto-rows</li>
+						<li>grid-auto-columns</li>
+						<li>grid-auto-flow</li>
+					</ul>
+					</section>
+					<section class="slide-5_2">
+						<p class="slide-subtitle">grid-template-columns</p>
+						<code>
+							<pre>
+								.container {
+									display: grid;
+									grid-gap: 15px;
+									grid-template-columns: 110px 200px 160px;
+								}
+							</pre>
+						</code>
+						<div class="container">
+							<div class="grid">
+								<div class="grid__item item-1">1</div>
+								<div class="grid__item item-2">2</div>
+								<div class="grid__item item-3">3</div>
+								<div class="grid__item item-4">4</div>
+								<div class="grid__item item-5">5</div>
+								<div class="grid__item item-6">6</div>
+							</div>
+						</div>
+					</section>
+					<section class="slide-5_3">
+						<p class="slide-subtitle">grid-template-rows</p>
+						<code>
+							<pre>
+								.container {
+									display: grid;
+									grid-gap: 15px;
+									grid-template-columns: 110px 200px 160px;
+									grid-template-rows: 70px 40px;
+								}
+							</pre>
+						</code>
+						<div class="container">
+							<div class="grid">
+								<div class="grid__item item-1">1</div>
+								<div class="grid__item item-2">2</div>
+								<div class="grid__item item-3">3</div>
+								<div class="grid__item item-4">4</div>
+								<div class="grid__item item-5">5</div>
+								<div class="grid__item item-6">6</div>
+							</div>
+						</div>
+					</section>
+					<section class="slide-5_4">
+						<p class="slide-subtitle">grid-auto-rows, grid-auto-columns, grid-auto-flow</p>
+						<code>
+							<pre>
+								.container {
+									display: grid;
+									grid-gap: 15px;
+									grid-template-columns: 200px 1fr;
+									grid-template-rows: 100px 1fr;
+									grid-auto-flow: column;
+								}
+							</pre>
+						</code>
+						<div class="container">
+							<div class="grid">
+								<div class="grid__item item-1">1</div>
+								<div class="grid__item item-2">2</div>
+								<div class="grid__item item-3">3</div>
+								<div class="grid__item item-4">4</div>
+								<div class="grid__item item-5">5</div>
+								<div class="grid__item item-6">6</div>
+							</div>
+						</div>
+					</section>
+				</section>
+				<section class="slide-6">
+					<section class="slide-6_1">
+						<p>Properties:</p>
+					<ul>
+						<li>grid-template-areas</li>
+						<li>grid-area</li>
+					</ul>
+					</section>
+					<section class="slide-6_2">
+						<code>HTML
+							<pre>
+								&lt;div class="grid"&gt;
+									&lt;header&gt;Header&lt;/header&gt;
+									&lt;aside&gt;Sidebar&lt;/aside&gt;
+									&lt;main&gt;Main&lt;/main&gt;
+									&lt;footer&gt;Footer&lt;/footer&gt;
+								&lt;/div&gt;
+							</pre>
+						</code>
+					</section>
+					<section class="slide-6_3">
+						<code>CSS
+							<pre>
+								.container {
+									display: grid;
+									grid-gap: 15px;
+									grid-template-columns: 200px 1fr;
+									grid-template-rows: 50px 70% 50px;
+									grid-template-areas:
+										"header header"
+										"aside main"
+										"footer footer";
+								}
+								header {
+									grid-area: header;
+									background-color: #66A5AD;
+								}
+								aside {
+									grid-area: aside;
+									background-color: #AEBD38;
+								}
+								main {
+									grid-area: main;
+									background-color: #CE5A57;
+								}
+								footer {
+									grid-area: footer;
+									background-color: #EBDCB2;
+								}
+							</pre>
+						</code>
+					</section>
+					<section class="slide-6_4">
+						<div class="container">
+							<div class="grid">
+								<header>Header</header>
+								<aside>Sidebar</aside>
+								<main>Main</main>
+								<footer>Footer</footer>
+							</div>
+						</div>
+					</section>
+				</section>
+				<section class="slide-7">
+					<section class="slide-7_1"  data-auto-animate>
+						<p>To learn more about other features and capabilities of CSS Grid, visit <a target="_blank" href="https://learncssgrid.com/">learncssgrid.com</a>, <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/grid">MDN Web Docs</a> and other resources.</p>
+					</section>
+					<section class="slide-7_2" data-auto-animate>
+						<p style="color: #C9A66B; font-size: 70px; font-weight: 900;">Thank you for your attention!</p>
+						<p style="color: #66A5AD; margin-top: 300px; font-size: 25px;">Created by Anton Leshkovich</p>
+					</section>
+				</section>
+			</div>
+		</div>
+
+		<script src="./dist/reveal.js"></script>
+		<script src="./plugin/notes/notes.js"></script>
+		<script src="./plugin/markdown/markdown.js"></script>
+		<script src="./plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+				progress: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>
